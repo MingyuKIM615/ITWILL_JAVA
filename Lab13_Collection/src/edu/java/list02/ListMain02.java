@@ -1,0 +1,44 @@
+package edu.java.list02;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class ListMain02 {
+
+	public static void main(String[] args) {
+		// 정수(Integer)를 저장할 수 있는 LinkedList를 생성
+		LinkedList<Integer> list = new LinkedList<Integer>();
+		
+		// 리스트에 순서대로 100, 200, 300, 400, 500을 저장 - add
+		for(int i = 0; i<5; i++) {
+			list.add((i+1)*100);
+		}
+		
+		// println 메서드를 사용해서 리스트 내용 출력
+		System.out.println(list);
+		
+		// 향상된 for 구문을 사용해서 리스트 내용 출력
+		for(int i : list) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+		
+		// 인덱스 0 위치의 원소를 123으로 변경 후 리스트를 출력 - set
+		list.set(0, 123); // 123 숫자(int) --> Integer 객체로 변환 --> 리스트의 0번 원소 값 변경
+		System.out.println(list);
+		
+		// 인덱스 1 위치의 원소를 삭제하고 리스트를 출력 - remove
+		list.remove(1);
+		System.out.println(list);
+		
+		// 123을 찾아서 (값으로) 삭제하고 리스트를 출력 - remove, Integer 클래스 사용
+		list.remove(Integer.valueOf(123)); // Integer.valueOf(int) : int --> Integer 변환
+		System.out.println(list);
+		
+		
+		
+		
+
+	}
+
+}
